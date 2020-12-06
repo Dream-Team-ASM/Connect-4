@@ -1,3 +1,17 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --text-color:rgb(0,0,0);
+    --board-color: hsl(234, 87%, 62%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(0, 0, 0);
+        --text-color:rgb(255, 255, 255);
+        --board-color: hsl(234, 87%, 62%);
+    }
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,13 +24,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 #board {
     width: 550px;
     padding: 15px 10px;
-    background-color: #4b5cf3; 
+    background-color: var(--board-color);
     border-radius: 30px;
     display: flex;
     justify-content: center;

@@ -7,7 +7,7 @@ var board = document.createElement('div');
 board.id = 'board';
 var current_player = '';
 var time_elapsed = 0;
-var timer;
+var timer;//time interval
 var isGameOver = false;
 const gameTimer = document.createElement('div');
 
@@ -50,7 +50,7 @@ function tick() {
     remain -= mins * 60;
     var secs = remain;
 
-    mins = (mins < 10) ? `0${mins}` : mins;
+    mins = (mins < 10) ? `0${mins}` : mins;//Time is a string 10 < add a 0 before
     secs = (secs < 10) ? `0${secs}` : secs; 
     gameTimer.innerHTML = mins + ":" + secs;
 }
